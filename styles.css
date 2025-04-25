@@ -1,17 +1,16 @@
+/* Global */
 :root {
   font-family: Roboto, "Times New Roman";
 }
 
 * {
   box-sizing: border-box;
-  overscroll-behavior: none;
 }
 
 html,
 body {
   padding: 0;
   margin: 0;
-  overflow-x: hidden;
 }
 
 body {
@@ -20,67 +19,24 @@ body {
   background-color: #f1f1f1;
 }
 
-.section {
-  display: flex;
-}
-
-.main-image {
-  position: relative;
-  display: inline-block;
-}
-
-.main-image > img {
-  width: 100%;
-  height: auto;
-}
-
-.about-me {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-}
-
-.diagonal {
-  position: absolute;
-  width: 100%;
-  height: 100vh;
-  background-color: #fb923c;
-  z-index: -1;
-  transform: skew(-60deg);
-  transform-origin: top left;
-}
-
-.main-image > img {
-  box-shadow: 0 0 16px 4px #000000;
-}
-
-.main-image > h1 {
-  color: #ffffff;
-  text-shadow: 1px 1px 1px #000000;
-}
-
-.text-area > h1 {
-  font-weight: 300;
-}
-
-.section > h1 {
-  font-weight: 300;
-}
-
-.contact-details > h1 {
-  font-weight: 300;
-}
-
-.links {
-  display: flex;
-  flex-direction: row;
-  justify-content: center;
-  gap: 16px;
-}
-
 a {
   background: none;
   border: none;
+}
+
+a:hover {
+  cursor: pointer;
+}
+
+.section {
+  display: flex;
+  padding: 1rem;
+  margin: 0;
+}
+
+/* Shared Properties */
+.section > h1 {
+  font-weight: 300;
 }
 
 a > img {
@@ -88,11 +44,90 @@ a > img {
 }
 
 .social-media {
-  padding: 32px;
+  padding-bottom: 5rem;
 }
 
 .social-media > a > img {
   width: 48px;
+}
+
+.links {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  gap: 24px;
+}
+
+/* About Me Section */
+
+.diagonal {
+  position: absolute;
+  width: 100%;
+  height: 100vh;
+  z-index: -1;
+  transform: skew(-60deg);
+  transform-origin: top left;
+  background-color: #fb923c;
+}
+
+.about-me {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 1rem;
+}
+
+.main-image {
+  position: relative;
+  display: inline-block;
+  height: auto;
+}
+
+.main-image > img {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+
+.main-image > img {
+  box-shadow: 0 0 16px 4px #000000;
+}
+
+.main-image > h1 {
+  max-width: 8ch;
+  color: #ffffff;
+  text-shadow: 1px 1px 1px #000000;
+}
+
+.text-area {
+  flex-direction: column;
+}
+
+.text-area > h1 {
+  margin-top: 0;
+  text-align: center;
+}
+
+.text-area > p {
+  color: #565656;
+  padding: 0 1rem;
+}
+
+/* My Work Section */
+
+.my-work {
+  align-items: center;
+  gap: 3rem;
+  padding-bottom: 4rem;
+}
+
+.linked-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  padding: 0 1rem;
 }
 
 .project.links {
@@ -101,38 +136,33 @@ a > img {
 }
 
 .work-entry {
-  box-shadow: 0 2px 12px 1px rgba(0, 0, 0, 0.178);
-}
-
-.work-entry > p {
-  margin: 16px;
-  text-align: center;
-  color: #565656;
-}
-
-a:hover {
-  cursor: pointer;
-}
-
-.work-entry {
   display: flex;
   flex-direction: column;
   align-items: center;
   background-color: #ffffff;
-  margin: 16px;
-}
-
-.linked-header {
-  display: flex;
-  gap: 16px;
-  align-items: center;
-  justify-content: space-between;
-  width: 100%;
-  padding: 0 16px;
+  box-shadow: 0 2px 12px 1px rgba(0, 0, 0, 0.178);
 }
 
 .work-entry > img {
   width: 100%;
+  height: auto;
+}
+
+.work-entry > p {
+  margin: 16px;
+  color: #565656;
+}
+
+/* Footer Section*/
+footer {
+  display: flex;
+  background-color: #fb923c;
+  padding: 0;
+  margin: 0;
+}
+
+footer > img {
+  width: 100vw;
   height: auto;
 }
 
@@ -147,74 +177,62 @@ a:hover {
   font-size: 24px;
 }
 
-footer {
-  display: flex;
-  background-color: #fb923c;
-  padding: 0;
-  margin: 0;
-}
-
 .contact-details > h1 {
   text-align: center;
-  color: #ffffff;
 }
 
-@media (max-width: 720px) {
-  .about-me {
-    align-items: center;
-    padding: 24px;
-  }
+.contact-details > h2 {
+  font-weight: 700;
+}
 
-  .main-image > img {
-    display: block;
-    margin: 16px;
-    width: 280px;
-    height: auto;
-  }
+.info {
+  font-weight: 500;
+}
 
+@media (max-width: 768px) {
+  /* Shared Properties */
   .section > h1,
   .contact-details > h1 {
     font-size: 3rem;
-    padding: 8px;
-    margin: 0;
+  }
+  /* About Me Section */
+
+  .main-image > img {
+    margin: 1rem;
+    width: 280px;
   }
 
   .main-image > h1 {
     position: absolute;
-    max-width: 8ch;
     font-size: 64px;
-    bottom: 0px;
+    bottom: -24px;
     left: 24px;
-  }
-
-  .text-area > h1 {
-    margin-top: 0;
-    font-size: 3rem;
-    text-align: center;
-  }
-
-  .text-area > p {
-    color: #565656;
-    font-size: 24px;
-    padding: 0px 16px;
-  }
-
-  .my-work {
-    flex-direction: column;
-    align-items: center;
-    gap: 1rem;
-    padding-bottom: 5rem;
-  }
-
-  .work-entry {
-    width: 290px;
-    height: 360px;
   }
 
   .linked-header > h2 {
     font-size: 1.5rem;
   }
 
+  .text-area > h1 {
+    font-size: 3rem;
+  }
+
+  .text-area > p {
+    font-size: 24px;
+  }
+
+  /* My Work Section */
+
+  .my-work {
+    flex-direction: column;
+  }
+
+  .work-entry {
+    width: 300px;
+    height: 360px;
+  }
+
+  /* Footer Section */
   footer {
     flex-direction: column;
   }
@@ -223,15 +241,12 @@ footer {
     position: relative;
     bottom: 0;
     left: 0;
-    width: 100vw;
-    height: auto;
-  }
-  footer > h2 {
-    font-weight: 900;
   }
 
   .info {
     font-size: 16px;
-    font-weight: 500;
   }
+}
+
+@media (max-width: 1024px) {
 }
