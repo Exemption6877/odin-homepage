@@ -2,6 +2,10 @@
   font-family: Roboto, "Times New Roman";
 }
 
+* {
+  box-sizing: border-box;
+}
+
 html,
 body {
   padding: 0;
@@ -10,6 +14,7 @@ body {
 
 body {
   background-color: #f1f1f1;
+  overflow-x: hidden;
 }
 
 .section {
@@ -20,6 +25,12 @@ body {
   position: relative;
   display: inline-block;
 }
+
+.main-image > img {
+  width: 100%;
+  height: auto;
+}
+
 .about-me {
   display: flex;
   flex-direction: column;
@@ -43,21 +54,25 @@ body {
 }
 
 .text-area > h1 {
-  font-weight: 400;
+  font-weight: 300;
 }
 
 .section > h1 {
-  font-weight: 400;
+  font-weight: 300;
+}
+
+.contact-details > h1 {
+  font-weight: 300;
 }
 
 .links {
   display: flex;
   flex-direction: row;
   justify-content: center;
-  gap: 1px;
+  gap: 16px;
 }
 
-.links > a {
+a {
   background: none;
   border: none;
 }
@@ -66,7 +81,16 @@ a > img {
   width: 32px;
 }
 
+.social-media {
+  padding: 32px;
+}
+
+.social-media > a > img {
+  width: 48px;
+}
+
 .project.links {
+  display: flex;
   gap: 10px;
 }
 
@@ -97,14 +121,38 @@ a:hover {
   gap: 16px;
   align-items: center;
   justify-content: space-between;
+  width: 100%;
+  padding: 0 16px;
 }
 
 .work-entry > img {
-  width: 310px;
+  width: 100%;
   height: auto;
 }
 
-@media (max-width: 480px) {
+.contact-details {
+  flex-direction: column;
+  padding: 16px;
+  margin: 0;
+}
+
+.contact-details > * {
+  color: white;
+  font-size: 24px;
+}
+
+footer {
+  display: flex;
+  background-color: #fb923c;
+  padding: 0;
+  margin: 0;
+}
+
+.contact-details > h1 {
+  color: #ffffff;
+}
+
+@media (max-width: 720px) {
   .about-me {
     align-items: center;
     padding: 24px;
@@ -118,28 +166,29 @@ a:hover {
 
   .main-image > img {
     display: block;
-    margin: 24px;
-    width: 320px;
+    margin: 16px;
+    width: 280px;
     height: auto;
   }
 
   .section > h1,
-  .main-image > h1 {
-    font-size: 72px;
+  .contact-details > h1 {
+    font-size: 3rem;
     padding: 8px;
     margin: 0;
   }
 
   .main-image > h1 {
     position: absolute;
-
+    max-width: 8ch;
+    font-size: 64px;
     bottom: 24px;
     left: 24px;
   }
 
   .text-area > h1 {
     margin-top: 0;
-    font-size: 4rem;
+    font-size: 3rem;
     text-align: center;
   }
 
@@ -153,14 +202,35 @@ a:hover {
     flex-direction: column;
     align-items: center;
     gap: 1rem;
+    padding-bottom: 5rem;
   }
 
   .work-entry {
-    width: 310px;
+    width: 290px;
     height: 360px;
   }
 
   .linked-header > h2 {
     font-size: 1.5rem;
+  }
+
+  footer {
+    flex-direction: column;
+  }
+
+  footer > img {
+    position: relative;
+    bottom: 0;
+    left: 0;
+    width: 100vw;
+    height: auto;
+  }
+  footer > h2 {
+    font-weight: 900;
+  }
+
+  .info {
+    font-size: 16px;
+    font-weight: 500;
   }
 }
