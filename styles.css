@@ -58,6 +58,11 @@ a:hover {
   cursor: pointer;
 }
 
+.work-entry > img {
+  width: 300px;
+  height: auto;
+}
+
 @media (max-width: 480px) {
   .about-me {
     align-items: center;
