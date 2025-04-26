@@ -16,6 +16,7 @@ body {
 body {
   display: flex;
   flex-direction: column;
+  align-items: center;
   background-color: #f1f1f1;
 }
 
@@ -45,14 +46,6 @@ a > img {
   width: 32px;
 }
 
-.social-media {
-  padding-bottom: 5rem;
-}
-
-.social-media > a > img {
-  width: 48px;
-}
-
 .links {
   display: flex;
   flex-direction: row;
@@ -73,38 +66,53 @@ a > img {
 }
 
 .about-me {
-  display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
   padding: 1rem 2rem;
 }
 
-.main-photo {
+.about-photo {
   position: relative;
+  display: flex;
 }
 
-.main-photo > img {
+.about-photo > picture > img {
   display: block;
   width: 100%;
   height: auto;
   box-shadow: 0 0 16px 4px #000000;
 }
 
-.main-photo > h1 {
-  max-width: 8ch;
+.about-photo > h1 {
   color: #ffffff;
   text-shadow: 1px 1px 1px #000000;
 }
 
-.about-me > p {
+.about-text {
+  display: flex;
+  flex-direction: column;
+}
+
+.about-text > p {
   color: #565656;
   padding: 0 1rem;
 }
 
-/* My Work Section */
+.social-media {
+  padding-bottom: 5rem;
+}
 
+.social-media > a > img {
+  width: 48px;
+}
+/* My Work Section */
 .my-work {
+  flex-direction: column;
+}
+
+.work-grid {
+  display: grid;
   align-items: center;
   gap: 3rem;
   padding-bottom: 4rem;
@@ -149,7 +157,7 @@ footer {
   margin: 0;
 }
 
-footer > img {
+footer > picture > img {
   width: 100vw;
   height: auto;
 }
@@ -177,6 +185,75 @@ footer > img {
   font-weight: 500;
 }
 
+@media (max-width: 1024px) {
+  /* About Me Section */
+  .about-me {
+    display: block;
+    padding: 1rem 2rem;
+    padding-top: 10rem;
+  }
+
+  .about-photo {
+    display: block;
+    float: left;
+    white-space: nowrap;
+    position: relative;
+    margin: -40px;
+    padding-right: 70px;
+    top: -50px;
+    left: 10px;
+  }
+
+  .about-photo > picture > img {
+    width: 400px;
+  }
+
+  .about-photo > h1 {
+    position: absolute;
+    top: 0px;
+    left: 420px;
+  }
+
+  .about-text {
+    display: block;
+    background-color: #ffffff;
+    box-shadow: 0 2px 12px 1px rgba(0, 0, 0, 0.178);
+    width: 75vw;
+  }
+
+  .about-me > .social-media {
+    display: none;
+  }
+
+  /* My Work Section */
+
+  .work-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .work-entry {
+    width: 300px;
+    height: 350px;
+  }
+
+  /* Footer Section */
+
+  footer {
+    flex-direction: row;
+    justify-content: space-between;
+    padding: 2rem;
+  }
+
+  footer > picture > img {
+    padding-right: 2rem;
+    width: 350px;
+  }
+
+  .info {
+    font-size: 1rem;
+  }
+}
+
 @media (max-width: 768px) {
   /* Shared Properties */
   .section > h2 {
@@ -184,31 +261,37 @@ footer > img {
   }
   /* About Me Section */
 
-  .main-photo > img {
+  .about-photo > picture > img {
+    position: static;
     margin: 1rem;
     width: 280px;
   }
 
-  .main-photo > h1 {
+  .about-photo > h1 {
     position: absolute;
     font-size: 64px;
     bottom: -24px;
     left: 24px;
   }
 
-  .about-me > h2 {
+  .about-me {
+    background: none;
+    box-shadow: none;
+  }
+
+  .about-text > h2 {
     font-size: 3rem;
   }
 
-  .about-me > p {
+  .about-text > p {
     font-size: 24px;
   }
 
-  /* My Work Section */
-
-  .my-work {
-    flex-direction: column;
+  .social-media {
+    display: flex;
   }
+
+  /* My Work Section */
 
   .work-entry {
     width: 300px;
@@ -224,7 +307,7 @@ footer > img {
     flex-direction: column;
   }
 
-  footer > img {
+  footer > picture > img {
     position: relative;
     bottom: 0;
     left: 0;

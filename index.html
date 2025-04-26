@@ -15,15 +15,31 @@
   <body>
       <div class="diagonal"></div>
     <div class="about-me section">
-      <div class="main-photo">
-        <img src="./images/about.jpg" alt="British shorthair cat" />
-        <h1>Cheshire Cat</12>
+      <div class="about-photo">
+        <picture>
+          <source srcset="./images/about-square.jpg" media ="(max-width: 1024px)">
+          <source srcset="./images/about.jpg" media="(max-width: 768px)">
+          <img src="./images/about.jpg" alt="British shorthair cat" />
+        </picture>
+        <h1>Cheshire Cat</h1>
         </div>
+        <div class="about-text section">
         <h2>About me</h2>
         <p>
-          I’m teaching myself web development, starting from zero. Right now I’m
-          working through The Odin Project.
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+          Morbi pretium posuere molestie. 
+          Curabitur posuere arcu sit amet condimentum ullamcorper. 
+          Integer nec efficitur leo. Praesent luctus a mi a bibendum. 
+          Nunc rutrum eros et nibh commodo pulvinar. 
+          Nam sit amet lobortis eros. Nullam eget pellentesque dui. 
+          Nam vehicula, mi non suscipit egestas, risus sapien viverra nisi, ut aliquam lacus odio eu nibh. 
+          Integer quis euismod dolor. 
+          Curabitur dictum, urna non feugiat consectetur, tellus augue suscipit magna, ut tincidunt felis elit eu elit. Cras vitae pretium arcu. 
+          Proin lobortis volutpat dui sit amet blandit. 
+          Sed non orci eget nibh tempus vestibulum vitae eu quam. 
+          Duis sodales leo sed tortor facilisis, nec malesuada dui tincidunt. 
         </p>
+      </div>
         <div class="social-media links">
           <a>
             <img src="./icons/github.svg" />
@@ -39,6 +55,7 @@
 
     <div class="my-work section">
       <h2>My Work</h2>
+      <div class ="work-grid">
       <div class="work-entry">
         <img src="./images/projects/project-1.png" alt="Project screenshot" />
         <div class="linked-header">
@@ -142,17 +159,19 @@
       </div>
     </div>
 
+    </div>
+
     <footer>
       <div class="contact-details section">
         <h2>Contact Me</h2>
         <h3>
           Please get in touch if you think our work could be mutually
           beneficial!
-        <h3>
+        </h3>
         <p class="info">1234 Random Road <span> Random Town, California 12345</p>
         <p class="info">555-555-5555</p>
         <p class="info">ashleywilliams.is.not.real@gmail.com</p>
-      </div>
+
       <div class="social-media links">
         <a>
         <img src="./icons/github.svg" />
@@ -162,9 +181,15 @@
       </a>
       <a>
         <img src="./icons/x.svg" />
-      </a></div>
-
-      <img src="./images/contact.jpg" alt="Yet another cat image" id="footer" />
+      </a>
+    </div>
+    </div>
+      <picture>
+        <source srcset="./images/contact-large.jpg" media="">
+        <source srcset="./images/contact-medium.jpg" media="(max-width: 1024px)">
+        <source srcset="./images/contact-small.jpg" media="(max-width: 768px)">
+        <img src="./images/contact-large.jpg" alt="Yet another cat image" id="footer" />
+      </picture>
     </footer>
   </body>
 </html>
