@@ -186,7 +186,16 @@ footer > picture > img {
 }
 
 @media (max-width: 1024px) {
+  .section > h2 {
+    font-size: 2.5rem;
+  }
+
+  .social-media {
+    padding-top: 1rem;
+  }
+
   /* About Me Section */
+
   .about-me {
     display: block;
     padding: 1rem 2rem;
@@ -209,16 +218,25 @@ footer > picture > img {
   }
 
   .about-photo > h1 {
+    font-size: 4rem;
     position: absolute;
-    top: 0px;
-    left: 420px;
+    top: -35px;
+    left: 300px;
   }
 
   .about-text {
     display: block;
     background-color: #ffffff;
     box-shadow: 0 2px 12px 1px rgba(0, 0, 0, 0.178);
-    width: 75vw;
+    width: 80vw;
+  }
+
+  .about-text > h2 {
+    font-size: 2.5rem;
+  }
+
+  .about-text > p {
+    font-size: 1.5rem;
   }
 
   .about-me > .social-media {
