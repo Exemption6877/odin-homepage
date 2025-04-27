@@ -105,6 +105,7 @@ a > img {
 .social-media > a > img {
   width: 48px;
 }
+
 /* My Work Section */
 .my-work {
   flex-direction: column;
@@ -149,7 +150,7 @@ a > img {
   color: #565656;
 }
 
-/* Footer Section*/
+/* Footer Section */
 footer {
   display: flex;
   background-color: #fb923c;
@@ -277,7 +278,7 @@ footer > picture > img {
   }
 }
 
-@media (max-width: 1024px) {
+@media (min-width: 769px) and (max-width: 1024px) {
   .section > h2 {
     font-size: 2.5rem;
   }
@@ -285,8 +286,6 @@ footer > picture > img {
   .social-media {
     padding-top: 1rem;
   }
-
-  /* About Me Section */
 
   .about-me {
     display: block;
@@ -331,11 +330,9 @@ footer > picture > img {
     font-size: 1.5rem;
   }
 
-  .about-me > .social-media {
+  .about-text > .social-media {
     display: none;
   }
-
-  /* My Work Section */
 
   .work-grid {
     grid-template-columns: repeat(2, 1fr);
@@ -346,8 +343,6 @@ footer > picture > img {
     height: 350px;
   }
 
-  /* Footer Section */
-
   footer {
     flex-direction: row;
     justify-content: space-between;
@@ -356,6 +351,7 @@ footer > picture > img {
 
   footer > picture > img {
     padding-right: 2rem;
+    padding-top: 1rem;
     width: 350px;
   }
 
@@ -365,13 +361,12 @@ footer > picture > img {
 }
 
 @media (max-width: 768px) {
-  /* Shared Properties */
   .section > h2 {
     font-size: 3rem;
   }
-  /* About Me Section */
 
   .about-photo > picture > img {
+    display: block;
     position: static;
     margin: 1rem;
     width: 280px;
@@ -401,26 +396,22 @@ footer > picture > img {
     display: flex;
   }
 
-  /* My Work Section */
-
-  .work-entry {
-    width: 300px;
-    height: 360px;
+  .work-grid {
+    grid-template-columns: 1fr;
   }
 
   .linked-header > h3 {
     font-size: 1.5rem;
   }
 
-  /* Footer Section */
   footer {
     flex-direction: column;
+    padding-bottom: 0;
+    margin-bottom: 0;
   }
 
   footer > picture > img {
-    position: relative;
-    bottom: 0;
-    left: 0;
+    position: absolute;
   }
 
   .info {
