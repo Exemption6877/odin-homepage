@@ -69,7 +69,6 @@ a > img {
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  padding: 1rem 2rem;
 }
 
 .about-photo {
@@ -115,6 +114,7 @@ a > img {
   display: grid;
   align-items: center;
   gap: 3rem;
+  padding: 0;
   padding-bottom: 4rem;
 }
 
@@ -183,6 +183,98 @@ footer > picture > img {
 
 .info {
   font-weight: 500;
+}
+
+@media (min-width: 1025px) {
+  .section > h2 {
+    font-size: 2.5rem;
+  }
+
+  .about-me {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    flex: 1;
+    margin: 0 24px;
+    max-width: 1200px;
+  }
+
+  .about-photo {
+    display: block;
+    position: relative;
+    top: 87px;
+  }
+
+  .about-photo > picture > img {
+    width: 500px;
+  }
+
+  .about-photo > h1 {
+    position: relative;
+    font-size: 68px;
+    bottom: 125px;
+  }
+
+  .about-text {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    margin: -24px;
+    background-color: #ffffff;
+    box-shadow: 0 2px 12px 1px rgba(0, 0, 0, 0.178);
+  }
+
+  .about-text > h2 {
+    align-self: flex-start;
+  }
+
+  .about-text > p {
+    font-size: 1.1rem;
+  }
+
+  .about-text > .social-media {
+    align-self: flex-end;
+    gap: 0px;
+    padding-bottom: 1rem;
+  }
+
+  a > img {
+    height: 32px;
+  }
+
+  .work-grid {
+    grid-template-columns: repeat(3, minmax(250px, 1fr));
+    align-items: stretch;
+  }
+
+  .work-entry {
+    height: auto;
+  }
+
+  footer {
+    justify-content: center;
+    flex-direction: row;
+    padding: 2rem;
+    width: 100%;
+  }
+
+  footer > picture > img {
+    padding-right: 2rem;
+    width: 350px;
+  }
+
+  .contact-details {
+    width: 500px;
+  }
+
+  .contact-details > .social-media {
+    align-self: flex-start;
+    padding-top: 1rem;
+  }
+
+  .info {
+    font-size: 1rem;
+  }
 }
 
 @media (max-width: 1024px) {

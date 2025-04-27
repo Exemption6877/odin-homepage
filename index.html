@@ -13,33 +13,36 @@
     <title>Homepage</title>
   </head>
   <body>
-      <div class="diagonal"></div>
+    <div class="diagonal"></div>
     <div class="about-me section">
       <div class="about-photo">
         <picture>
-          <source srcset="./images/about-square.jpg" media ="(max-width: 1024px)">
-          <source srcset="./images/about.jpg" media="(max-width: 768px)">
+          <source
+            srcset="./images/about-square.jpg"
+            media="(min-width: 1025px)"
+          />
+          <source
+            srcset="./images/about-square.jpg"
+            media="(max-width: 1024px)"
+          />
+          <source srcset="./images/about.jpg" media="(max-width: 768px)" />
           <img src="./images/about.jpg" alt="British shorthair cat" />
         </picture>
         <h1>Cheshire Cat</h1>
-        </div>
-        <div class="about-text section">
+      </div>
+      <div class="about-text section">
         <h2>About me</h2>
         <p>
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-          Morbi pretium posuere molestie. 
-          Curabitur posuere arcu sit amet condimentum ullamcorper. 
-          Integer nec efficitur leo. Praesent luctus a mi a bibendum. 
-          Nunc rutrum eros et nibh commodo pulvinar. 
-          Nam sit amet lobortis eros. Nullam eget pellentesque dui. 
-          Nam vehicula, mi non suscipit egestas, risus sapien viverra nisi, ut aliquam lacus odio eu nibh. 
-          Integer quis euismod dolor. 
-          Curabitur dictum, urna non feugiat consectetur, tellus augue suscipit magna, ut tincidunt felis elit eu elit. Cras vitae pretium arcu. 
-          Proin lobortis volutpat dui sit amet blandit. 
-          Sed non orci eget nibh tempus vestibulum vitae eu quam. 
-          Duis sodales leo sed tortor facilisis, nec malesuada dui tincidunt. 
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi pretium
+          posuere molestie. Curabitur posuere arcu sit amet condimentum
+          ullamcorper. Integer nec efficitur leo. Praesent luctus a mi a
+          bibendum. Nunc rutrum eros et nibh commodo pulvinar. Nam sit amet
+          lobortis eros. Nullam eget pellentesque dui. Nam vehicula, mi non
+          suscipit egestas, risus sapien viverra nisi, ut aliquam lacus odio eu
+          nibh. Integer quis euismod dolor. Curabitur dictum, urna non feugiat
+          consectetur, tellus augue suscipit magna, ut tincidunt felis elit eu
+          elit. Cras vitae pretium arcu.
         </p>
-      </div>
         <div class="social-media links">
           <a>
             <img src="./icons/github.svg" />
@@ -51,114 +54,114 @@
             <img src="./icons/x.svg" />
           </a>
         </div>
+      </div>
     </div>
 
     <div class="my-work section">
       <h2>My Work</h2>
-      <div class ="work-grid">
-      <div class="work-entry">
-        <img src="./images/projects/project-1.png" alt="Project screenshot" />
-        <div class="linked-header">
-          <h3>Tic Tac Toe</h3>
-          <div class="project links">
-            <a href="https://github.com/Exemption6877/odin-tic-tac-toe">
-              <img src="./icons/github.svg" alt="Go to GitHub repository" />
-            </a>
-            <a href="https://exemption6877.github.io/odin-tic-tac-toe/">
-              <img src="./icons/open.svg" alt="Go to deployed webpage" />
-            </a>
+      <div class="work-grid">
+        <div class="work-entry">
+          <img src="./images/projects/project-1.png" alt="Project screenshot" />
+          <div class="linked-header">
+            <h3>Tic Tac Toe</h3>
+            <div class="project links">
+              <a href="https://github.com/Exemption6877/odin-tic-tac-toe">
+                <img src="./icons/github.svg" alt="Go to GitHub repository" />
+              </a>
+              <a href="https://exemption6877.github.io/odin-tic-tac-toe/">
+                <img src="./icons/open.svg" alt="Go to deployed webpage" />
+              </a>
+            </div>
           </div>
+          <p>A simple Tic Tac Toe game.</p>
         </div>
-        <p>A simple Tic Tac Toe game.</p>
-      </div>
 
-      <div class="work-entry">
-        <img src="./images/projects/project-2.png" alt="Project screenshot" />
-        <div class="linked-header">
-          <h3>Battleship</h3>
-          <div class="project links">
-            <a href="https://exemption6877.github.io/odin-battleship/">
-              <img src="./icons/github.svg" alt="Go to GitHub repository" />
-            </a>
-            <a href="https://github.com/Exemption6877/odin-battleship">
-              <img src="./icons/open.svg" alt="Go to deployed webpage" />
-            </a>
+        <div class="work-entry">
+          <img src="./images/projects/project-2.png" alt="Project screenshot" />
+          <div class="linked-header">
+            <h3>Battleship</h3>
+            <div class="project links">
+              <a href="https://exemption6877.github.io/odin-battleship/">
+                <img src="./icons/github.svg" alt="Go to GitHub repository" />
+              </a>
+              <a href="https://github.com/Exemption6877/odin-battleship">
+                <img src="./icons/open.svg" alt="Go to deployed webpage" />
+              </a>
+            </div>
           </div>
+          <p>
+            A simple Battleship game where players take turns guessing ship
+            locations on a grid.
+          </p>
         </div>
-        <p>
-          A simple Battleship game where players take turns guessing ship
-          locations on a grid.
-        </p>
-      </div>
 
-      <div class="work-entry">
-        <img src="./images/projects/project-3.png" alt="Project screenshot" />
-        <div class="linked-header">
-          <h3>Weather App</h3>
-          <div class="project links">
-            <a href="https://github.com/Exemption6877/weather-app">
-              <img src="./icons/github.svg" alt="Go to GitHub repository" />
-            </a>
-            <a href="https://exemption6877.github.io/weather-app/">
-              <img src="./icons/open.svg" alt="Go to deployed webpage" />
-            </a>
+        <div class="work-entry">
+          <img src="./images/projects/project-3.png" alt="Project screenshot" />
+          <div class="linked-header">
+            <h3>Weather App</h3>
+            <div class="project links">
+              <a href="https://github.com/Exemption6877/weather-app">
+                <img src="./icons/github.svg" alt="Go to GitHub repository" />
+              </a>
+              <a href="https://exemption6877.github.io/weather-app/">
+                <img src="./icons/open.svg" alt="Go to deployed webpage" />
+              </a>
+            </div>
           </div>
+          <p>A simple app that lets users look up current weather by city.</p>
         </div>
-        <p>A simple app that lets users look up current weather by city.</p>
-      </div>
 
-      <div class="work-entry">
-        <img src="./images/projects/project-4.png" alt="Project screenshot" />
-        <div class="linked-header">
-          <h3>Restaurant Page</h3>
-          <div class="project links">
-            <a href="https://github.com/Exemption6877/odin-restaurant-page">
-              <img src="./icons/github.svg" alt="Go to GitHub repository" />
-            </a>
-            <a href="https://exemption6877.github.io/odin-restaurant-page/">
-              <img src="./icons/open.svg" alt="Go to deployed webpage" />
-            </a>
+        <div class="work-entry">
+          <img src="./images/projects/project-4.png" alt="Project screenshot" />
+          <div class="linked-header">
+            <h3>Restaurant Page</h3>
+            <div class="project links">
+              <a href="https://github.com/Exemption6877/odin-restaurant-page">
+                <img src="./icons/github.svg" alt="Go to GitHub repository" />
+              </a>
+              <a href="https://exemption6877.github.io/odin-restaurant-page/">
+                <img src="./icons/open.svg" alt="Go to deployed webpage" />
+              </a>
+            </div>
           </div>
+          <p>A restaurant landing page layout</p>
         </div>
-        <p>A restaurant landing page layout</p>
-      </div>
 
-      <div class="work-entry">
-        <img src="./images/projects/project-5.png" alt="Project screenshot" />
-        <div class="linked-header">
-          <h3>Admin Dashboard</h3>
-          <div class="project links">
-            <a href="https://github.com/Exemption6877/odin-admin-dashboard">
-              <img src="./icons/github.svg" alt="Go to GitHub repository" />
-            </a>
-            <a href="https://exemption6877.github.io/odin-admin-dashboard/">
-              <img src="./icons/open.svg" alt="Go to deployed webpage" />
-            </a>
+        <div class="work-entry">
+          <img src="./images/projects/project-5.png" alt="Project screenshot" />
+          <div class="linked-header">
+            <h3>Admin Dashboard</h3>
+            <div class="project links">
+              <a href="https://github.com/Exemption6877/odin-admin-dashboard">
+                <img src="./icons/github.svg" alt="Go to GitHub repository" />
+              </a>
+              <a href="https://exemption6877.github.io/odin-admin-dashboard/">
+                <img src="./icons/open.svg" alt="Go to deployed webpage" />
+              </a>
+            </div>
           </div>
+          <p>A simple website dashboard.</p>
         </div>
-        <p>A simple website dashboard.</p>
-      </div>
 
-      <div class="work-entry">
-        <img src="./images/projects/project-6.png" alt="Project screenshot" />
-        <div class="linked-header">
-          <h3>Etch-A-Sketch</h3>
-          <div class="project links">
-            <a href="https://github.com/Exemption6877/etch-a-sketch">
-              <img src="./icons/github.svg" alt="Go to GitHub repository" />
-            </a>
-            <a href="https://exemption6877.github.io/etch-a-sketch/">
-              <img src="./icons/open.svg" alt="Go to deployed webpage" />
-            </a>
+        <div class="work-entry">
+          <img src="./images/projects/project-6.png" alt="Project screenshot" />
+          <div class="linked-header">
+            <h3>Etch-A-Sketch</h3>
+            <div class="project links">
+              <a href="https://github.com/Exemption6877/etch-a-sketch">
+                <img src="./icons/github.svg" alt="Go to GitHub repository" />
+              </a>
+              <a href="https://exemption6877.github.io/etch-a-sketch/">
+                <img src="./icons/open.svg" alt="Go to deployed webpage" />
+              </a>
+            </div>
           </div>
+          <p>
+            A simple Etch-a-Sketch app that lets users draw by hovering over a
+            grid.
+          </p>
         </div>
-        <p>
-          A simple Etch-a-Sketch app that lets users draw by hovering over a
-          grid.
-        </p>
       </div>
-    </div>
-
     </div>
 
     <footer>
@@ -168,27 +171,40 @@
           Please get in touch if you think our work could be mutually
           beneficial!
         </h3>
-        <p class="info">1234 Random Road <span> Random Town, California 12345</p>
+        <p class="info">1234 Random Road Random Town, California 12345</p>
         <p class="info">555-555-5555</p>
         <p class="info">ashleywilliams.is.not.real@gmail.com</p>
 
-      <div class="social-media links">
-        <a>
-        <img src="./icons/github.svg" />
-      </a>
-      <a>
-        <img src="./icons/linkedin.svg" />
-      </a>
-      <a>
-        <img src="./icons/x.svg" />
-      </a>
-    </div>
-    </div>
+        <div class="social-media links">
+          <a>
+            <img src="./icons/github.svg" />
+          </a>
+          <a>
+            <img src="./icons/linkedin.svg" />
+          </a>
+          <a>
+            <img src="./icons/x.svg" />
+          </a>
+        </div>
+      </div>
       <picture>
-        <source srcset="./images/contact-large.jpg" media="">
-        <source srcset="./images/contact-medium.jpg" media="(max-width: 1024px)">
-        <source srcset="./images/contact-small.jpg" media="(max-width: 768px)">
-        <img src="./images/contact-large.jpg" alt="Yet another cat image" id="footer" />
+        <source
+          srcset="./images/contact-large.jpg"
+          media="(min-width: 1025px)"
+        />
+        <source
+          srcset="./images/contact-medium.jpg"
+          media="(max-width: 1024px)"
+        />
+        <source
+          srcset="./images/contact-small.jpg"
+          media="(max-width: 768px)"
+        />
+        <img
+          src="./images/contact-large.jpg"
+          alt="Yet another cat image"
+          id="footer"
+        />
       </picture>
     </footer>
   </body>
